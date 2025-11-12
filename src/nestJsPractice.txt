@@ -1,0 +1,25 @@
+
+@Controller("cats")
+export class CatsController {
+    @Post(){
+        create():string{
+            return "This action adds a new cat";
+        }
+    }
+    @Get(){
+        findAll():string- {
+            return "This action returns all cats";
+        }
+    }
+    @Delete(){
+        findAll():string{
+            return "This action returns all cats";
+        }
+    }
+
+    @Patch(){
+        findAll():string{
+            return "This action returns all cats";
+        }
+    }
+}
