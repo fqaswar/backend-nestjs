@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
-import { BookModule } from 'src/book/book.module';
-import { UsersModule } from './users/users.module';
+import { BookModule } from 'src/modules/book/book.module';
+import { UsersModule } from './modules/users/users.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { typeormConfig } from './config/databases/typeorm.config';
 
 @Module({
-  imports: [BookModule, UsersModule],
+  imports: [TypeOrmModule.forRoot(typeormConfig), BookModule, UsersModule],
   controllers: [],
   providers: [],
   exports: [],
