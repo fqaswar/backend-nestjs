@@ -15,7 +15,6 @@ export class BookMiddleware implements NestMiddleware {
     console.log(
       `date: [${date.toISOString()}] method type:  ${method} & request to ${protocol}://${host}${originalUrl}`,
     );
-
     next();
   }
 }

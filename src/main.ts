@@ -17,6 +17,7 @@ async function bootstrap() {
 
   app.use(globalMiddleware); // middleware applied & call here
   app.use(middleware2); // middleware applied & call here
+
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
